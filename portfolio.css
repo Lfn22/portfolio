@@ -1,0 +1,320 @@
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Header fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #6b9fef, #0d3b66);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+header nav a:hover,
+header nav a:focus {
+  color: #f4a261;
+  outline: none;
+  transform: scale(1.05);
+}
+
+/* Seções */
+section {
+  padding: 140px 20px 60px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #0d3b66;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 10px auto 0;
+  background-color: #f4a261;
+  border-radius: 2px;
+}
+
+/* Container flexível */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Foto e bio */
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #0d3b66;
+  transition: transform 0.3s;
+}
+
+.foto:hover {
+  transform: scale(1.05);
+}
+
+.bio {
+  max-width: 600px;
+  text-align: left;
+}
+
+.bio p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+/* Botões principais */
+.botoes a {
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-linkedin { background-color: #0077b5; }
+.btn-linkedin:hover { background-color: #005983; }
+
+.btn-github { background-color: #333; }
+.btn-github:hover { background-color: #111; }
+
+.btn-curriculo { background-color: #f4a261; }
+.btn-curriculo:hover { background-color: #e07b39; }
+
+/* Cards de Projetos e Certificados */
+.cards-container, .cards-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 250px;
+  min-height: 320px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+/* Tag de categoria no card */
+.card::before {
+  content: attr(data-category);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.1);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+/* Links dentro do card */
+.card a {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+/* Cores por categoria */
+.card.frontend a { background-color: #f4a261; }
+.card.frontend a:hover { background-color: #e07b39; }
+
+.card.infra a { background-color: #2a9d8f; }
+.card.infra a:hover { background-color: #21867a; }
+
+.card.dados a { background-color: #e76f51; }
+.card.dados a:hover { background-color: #d65a3b; }
+
+.card.softskills a { background-color: #8ecae6; }
+.card.softskills a:hover { background-color: #6faed9; }
+
+.card.devops a { background-color: #ffb703; color: #333; }
+.card.devops a:hover { background-color: #e6a000; }
+
+.card.seguranca a { background-color: #6a4c93; }
+.card.seguranca a:hover { background-color: #52387a; }
+
+/* Scroll horizontal */
+.cards-scroll {
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.cards-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-scroll::-webkit-scrollbar-thumb {
+  background-color: #0d3b66;
+  border-radius: 4px;
+}
+
+/* Filtros */
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #6b9fef;
+  color: white;
+  transition: all 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: #0d3b66;
+}
+
+/* Paginação */
+.pagination button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f4a261;
+  color: white;
+  transition: all 0.3s;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Contato */
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input, form textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+  outline: 2px solid #f4a261;
+}
+
+form button {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0d3b66;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+form button:hover {
+  background-color: #07335a;
+}
+
+/* Responsividade */
+@media(max-width:768px){
+  .container {
+    flex-direction: column;
+  }
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+  .cards-container, .cards-scroll {
+    justify-content: center;
+  }
+}
+
+@media(max-width:480px){
+  .cards-container, .cards-scroll {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    min-height: auto;
+  }
+  .botoes a {
+    padding: 8px 15px;
+    margin: 5px 0;
+  }
+}

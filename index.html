@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Lindomar Negreiros</title>
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Lindomar Negreiros</div>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#frontend">Front-end</a>
+    <a href="#infra">Infraestrutura</a>
+    <a href="#dados">Dados</a>
+    <a href="#certificacoes">Certificações</a>
+    <a href="#recomendacoes">Recomendações</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section id="sobre">
+  <div class="container">
+    <img src="images/fotolf.png" alt="Foto de Lindomar" class="foto">
+    <div class="bio">
+      <p>Sou estudante de Engenharia de Software. O que me diferencia é unir infraestrutura estável com soluções visuais e dados estratégicos.</p>
+      <p>Comunicação clara | Resolução de problemas | Trabalho em equipe | Aprendizado contínuo</p>
+      <div class="botoes">
+        <a href="https://www.linkedin.com/in/lindomar-lopes-de-negreiros-filho-4540b8220/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Lfn22" target="_blank">GitHub</a>
+        <a href="curriculo.pdf" target="_blank">Currículo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="frontend">
+  <h2>Projetos de Front-end</h2>
+  <div class="cards-container"></div>
+</section>
+
+<section id="infra">
+  <h2>Projetos de Infraestrutura</h2>
+  <div class="cards-container"></div>
+</section>
+
+<section id="dados">
+  <h2>Projetos de Análise de Dados</h2>
+  <div class="cards-container"></div>
+</section>
+
+<section id="certificacoes">
+  <h2>Certificações</h2>
+  <div class="filters">
+    <button class="filter-btn active" data-category="all">Todos</button>
+    <button class="filter-btn" data-category="frontend">Front-end</button>
+    <button class="filter-btn" data-category="devops">DevOps</button>
+    <button class="filter-btn" data-category="infra">Infraestrutura</button>
+    <button class="filter-btn" data-category="seguranca">Segurança</button>
+    <button class="filter-btn" data-category="ia">Dados e IA</button>
+  </div>
+  <div class="cards-scroll"></div>
+  <div class="pagination"></div>
+</section>
+
+<section id="recomendacoes">
+  <h2>Recomendações</h2>
+  <p>“Lindomar se destacou pela capacidade de resolver problemas técnicos complexos com proatividade e comunicação clara.” – Waldiney B. Passos Filho</p>
+  <a href="cartarecomendacao.pdf" target="_blank">Download da Carta</a>
+</section>
+
+<section id="contato">
+  <h2>Contato</h2>
+  <form>
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Mensagem" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <p>Email: lindomarlfn@gmail.com | WhatsApp: +55 89 98137-8359</p>
+</section>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
