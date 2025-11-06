@@ -1,87 +1,205 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Lindomar Negreiros</title>
-  <link rel="stylesheet" href="portfolio.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Lindomar Negreiros com projetos em front-end, infraestrutura, dados e certificações."
+    />
+    <meta name="theme-color" content="#0d3b66" />
+    <meta property="og:title" content="Portfólio | Lindomar Negreiros" />
+    <meta
+      property="og:description"
+      content="Projetos, certificações e contato de Lindomar Negreiros, estudante de Engenharia de Software."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lfn22.github.io/portfolio" />
+    <meta property="og:image" content="images/fotolf.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Portfólio Lindomar Negreiros</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <a href="#principal" class="skip-link">Pular para o conteúdo principal</a>
+  <header>
+          <div class="logo">Lindomar Negreiros</div>
+      <nav aria-label="Seções principais">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#frontend">Front-end</a></li>
+          <li><a href="#infra">Infraestrutura</a></li>
+          <li><a href="#dados">Dados</a></li>
+          <li><a href="#certificacoes">Certificações</a></li>
+          <li><a href="#recomendacoes">Recomendações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
 
-<header>
-  <div class="logo">Lindomar Negreiros</div>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#frontend">Front-end</a>
-    <a href="#infra">Infraestrutura</a>
-    <a href="#dados">Dados</a>
-    <a href="#certificacoes">Certificações</a>
-    <a href="#recomendacoes">Recomendações</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+ <main id="principal">
+      <section id="sobre">
+        <div class="container">
+          <img src="images/fotolf.png" alt="Foto de Lindomar" class="foto" />
+          <div class="bio">
+            <p>
+              Sou estudante de Engenharia de Software. O que me diferencia é
+              unir infraestrutura estável com soluções visuais e dados
+              estratégicos.
+            </p>
+            <p>
+              Comunicação clara | Resolução de problemas | Trabalho em equipe |
+              Aprendizado contínuo
+            </p>
+            <div class="botoes">
+              <a
+                class="btn-linkedin"
+                href="https://www.linkedin.com/in/lindomar-lopes-de-negreiros-filho-4540b8220/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+              <a
+                class="btn-github"
+                href="https://github.com/Lfn22"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+              <a
+                class="btn-curriculo"
+                href="curriculo.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Currículo</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-<section id="sobre">
-  <div class="container">
-    <img src="images/fotolf.png" alt="Foto de Lindomar" class="foto">
-    <div class="bio">
-      <p>Sou estudante de Engenharia de Software. O que me diferencia é unir infraestrutura estável com soluções visuais e dados estratégicos.</p>
-      <p>Comunicação clara | Resolução de problemas | Trabalho em equipe | Aprendizado contínuo</p>
-      <div class="botoes">
-        <a href="https://www.linkedin.com/in/lindomar-lopes-de-negreiros-filho-4540b8220/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Lfn22" target="_blank">GitHub</a>
-        <a href="curriculo.pdf" target="_blank">Currículo</a>
-      </div>
-    </div>
-  </div>
-</section>
+      <section id="frontend">
+        <h2>Projetos de Front-end</h2>
+        <div class="cards-container"></div>
+      </section>
 
-<section id="frontend">
-  <h2>Projetos de Front-end</h2>
-  <div class="cards-container"></div>
-</section>
+      <section id="infra">
+        <h2>Projetos de Infraestrutura</h2>
+        <div class="cards-container"></div>
+      </section>
 
-<section id="infra">
-  <h2>Projetos de Infraestrutura</h2>
-  <div class="cards-container"></div>
-</section>
+      <section id="dados">
+        <h2>Projetos de Análise de Dados</h2>
+        <div class="cards-container"></div>
+      </section>
 
-<section id="dados">
-  <h2>Projetos de Análise de Dados</h2>
-  <div class="cards-container"></div>
-</section>
+     <section id="certificacoes">
+        <h2>Certificações</h2>
+        <div class="filters">
+          <button
+            class="filter-btn active"
+            data-category="all"
+            aria-pressed="true"
+          >
+            Todos
+          </button>
+          <button
+            class="filter-btn"
+            data-category="frontend"
+            aria-pressed="false"
+          >
+            Front-end
+          </button>
+          <button
+            class="filter-btn"
+            data-category="devops"
+            aria-pressed="false"
+          >
+            DevOps
+          </button>
+          <button class="filter-btn" data-category="infra" aria-pressed="false">
+            Infraestrutura
+          </button>
+          <button
+            class="filter-btn"
+            data-category="seguranca"
+            aria-pressed="false"
+          >
+            Segurança
+          </button>
+          <button class="filter-btn" data-category="ia" aria-pressed="false">
+            Dados e IA
+          </button>
+        </div>
+        <div class="cards-scroll" aria-live="polite"></div>
+        <div class="pagination"></div>
+      </section>
 
-<section id="certificacoes">
-  <h2>Certificações</h2>
-  <div class="filters">
-    <button class="filter-btn active" data-category="all">Todos</button>
-    <button class="filter-btn" data-category="frontend">Front-end</button>
-    <button class="filter-btn" data-category="devops">DevOps</button>
-    <button class="filter-btn" data-category="infra">Infraestrutura</button>
-    <button class="filter-btn" data-category="seguranca">Segurança</button>
-    <button class="filter-btn" data-category="ia">Dados e IA</button>
-  </div>
-  <div class="cards-scroll"></div>
-  <div class="pagination"></div>
-</section>
+ <section id="recomendacoes">
+        <h2>Recomendações</h2>
+        <p>
+          “Lindomar se destacou pela capacidade de resolver problemas técnicos
+          complexos com proatividade e comunicação clara.” – Waldiney B. Passos
+          Filho
+        </p>
+        <a
+          href="cartarecomendacao.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Download da Carta</a
+        >
+      </section>
 
-<section id="recomendacoes">
-  <h2>Recomendações</h2>
-  <p>“Lindomar se destacou pela capacidade de resolver problemas técnicos complexos com proatividade e comunicação clara.” – Waldiney B. Passos Filho</p>
-  <a href="cartarecomendacao.pdf" target="_blank">Download da Carta</a>
-</section>
 
 <section id="contato">
-  <h2>Contato</h2>
-  <form>
-    <input type="text" placeholder="Nome" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Mensagem" required></textarea>
-    <button type="submit">Enviar</button>
-  </form>
-  <p>Email: lindomarlfn@gmail.com | WhatsApp: +55 89 98137-8359</p>
-</section>
+        <h2>Contato</h2>
+        <form
+          action="https://formsubmit.co/lindomarlfn@gmail.com"
+          method="POST"
+        >
+          <label for="nome">Nome</label>
+          <input
+            id="nome"
+            name="name"
+            type="text"
+            placeholder="Nome"
+            required
+            autocomplete="name"
+          />
 
-<script src="portfolio.js"></script>
-</body>
+     <label for="email">Email</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+
+          <label for="mensagem">Mensagem</label>
+          <textarea
+            id="mensagem"
+            name="message"
+            placeholder="Mensagem"
+            required
+            rows="4"
+          ></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p>Email: lindomarlfn@gmail.com | WhatsApp: +55 89 98137-8359</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="ano-atual"></span> Lindomar Negreiros. Todos os
+        direitos reservados.
+      </p>
+    </footer>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
 </html>
